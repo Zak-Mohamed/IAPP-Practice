@@ -1,10 +1,12 @@
-<?php 
-include 'classes.php';
+<?php
+//Include class File
+include 'ClassAutoload.php';
+$sample = new Sample();
+echo $sample-> greet();
+echo $sample-> week_day();
 
-// create instance 
-$sample = new SampleClass();
-echo $sample->greet("World");
 
-echo $sample->week_day("Monday");
 
+print "br" ;
+print "Copyright &copy; - " . $conf[site_name]
 ?>
