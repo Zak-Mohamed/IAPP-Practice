@@ -7,3 +7,7 @@ This folder will be used for Internet Application Programming practice.
 
    # Creating Simple class Examples
    
+
+   # Using Folders to create Folder Structure 
+
+   # Using ClassAutoload to minimize the require line of code 
