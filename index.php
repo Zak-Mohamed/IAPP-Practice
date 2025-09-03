@@ -8,5 +8,5 @@ echo $sample-> week_day();
 
 
 print "br" ;
-print "Copyright &copy; - " . $conf[site_name]
+print "Copyright &copy; - " . $conf[$site_name]
 ?>

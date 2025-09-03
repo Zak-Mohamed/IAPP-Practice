@@ -1,5 +1,5 @@
 <?php 
-class SampleClass {
+class Sample {
     public function greet($name) {
         return "Hello, " . $name . "!";
     }
@@ -9,6 +9,6 @@ class SampleClass {
 }
 
 // create instance 
-$sample = new SampleClass();
+$sample = new Sample();
 echo $sample->greet("World");
 ?>
