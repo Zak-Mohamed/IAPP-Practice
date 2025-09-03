@@ -1,5 +1,6 @@
 <?php
-$directory = array("Forms", "forms");
+require 'conf.php';
+$directory = array("Global", "layouts", "Forms");
 
 spl_autoload_register(function ($class_name) use ($directory) {
     foreach ($directory as $dir) {
@@ -8,3 +9,7 @@ spl_autoload_register(function ($class_name) use ($directory) {
         }
     }
 });
+// Now you can create instances of classes without manually including their files
+$sample = new sample();
+$layout = new layouts();
+$forms = new forms();
