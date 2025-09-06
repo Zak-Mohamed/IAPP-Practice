@@ -13,3 +13,4 @@ spl_autoload_register(function ($class_name) use ($directory) {
 $sample = new sample();
 $layout = new layouts();
 $forms = new forms();
+

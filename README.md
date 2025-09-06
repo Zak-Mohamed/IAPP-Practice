@@ -1,13 +1,8 @@
-# IAPP-Practice
+# Testing Connection first in the Trial Folder
 
-This folder will be used for Internet Application Programming practice.
+# Creating Simple class Examples
 
-   # Testing Connection first in the Trial Folder 
+# Using Folders to create Folder Structure
 
+# Using ClassAutoload to minimize the require line of code
 
-   # Creating Simple class Examples
-   
-
-   # Using Folders to create Folder Structure 
-
-   # Using ClassAutoload to minimize the require line of code 

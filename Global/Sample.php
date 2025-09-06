@@ -13,4 +13,4 @@ class sample
 
 // create instance 
 $sample = new sample();
-echo $sample->greet("World");
+echo $sample->greet("Zakyboss");

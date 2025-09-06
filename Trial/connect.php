@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "Zakyboss";
-$dbname = "trialdb"; // your database
+$password = "";
+$dbname = "ridelink_sacco"; 
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -13,27 +13,29 @@ if ($conn->connect_error) {
 }
 echo "<h2 style='font-family: Arial; color: green;'>✅ Connected successfully</h2>";
 
-$sql = "SELECT id, Fname, Lname, Email, Course FROM students";
+$sql = "SELECT member_id, full_name, phone, email, employment_status, monthly_income FROM sacco_members";
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     echo "<table border='1' cellpadding='10' cellspacing='0' 
             style='border-collapse: collapse; width: 80%; margin: 20px auto; font-family: Arial; box-shadow: 0px 3px 8px rgba(0,0,0,0.2);'>
             <tr style='background-color: #4CAF50; color: white; text-align: left;'>
-                <th>ID</th>
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th>Member ID</th>
+                <th>Full Name</th>
+                <th>Phone</th>
                 <th>Email</th>
-                <th>Course</th>
+                <th>Employment</th>
+                <th>Monthly Income</th>
             </tr>";
     
     while ($row = $result->fetch_assoc()) {
         echo "<tr style='background-color: #f9f9f9;'>
-                <td>" . $row["id"] . "</td>
-                <td>" . $row["Fname"] . "</td>
-                <td>" . $row["Lname"] . "</td>
-                <td>" . $row["Email"] . "</td>
-                <td>" . $row["Course"] . "</td>
+                <td>" . $row["member_id"] . "</td>
+                <td>" . $row["full_name"] . "</td>
+                <td>" . $row["phone"] . "</td>
+                <td>" . $row["email"] . "</td>
+                <td>" . $row["employment_status"] . "</td>
+                <td>" . $row["monthly_income"] . "</td>
               </tr>";
     }
     echo "</table>";
