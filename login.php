@@ -1,6 +1,6 @@
 <?php
 // Include the class file
-require 'ClassAutoLoad.php';
+require 'ClassAutoload.php';
 $layout->header($conf);
-$forms->signin();
+$forms->member_login();
 $layout->footer($conf);
