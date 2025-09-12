@@ -3,81 +3,63 @@ class forms {
     
     public function member_registration() {
         ?>
-        <form action='member-submit.php' method='post'>
-            <label for='full_name'>Full Name:</label>
-            <input type='text' id='full_name' name='full_name' required><br><br>
+        <div style="max-width: 600px; margin: 0 auto; background: white; padding: 2rem; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1);">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Sign Up Here</h2>
             
-            <label for='id_number'>National ID Number:</label>
-            <input type='text' id='id_number' name='id_number' required><br><br>
-            
-            <label for='phone'>Phone Number:</label>
-            <input type='tel' id='phone' name='phone' required><br><br>
-            
-            <label for='email'>Email Address:</label>
-            <input type='email' id='email' name='email' required><br><br>
-            
-            <label for='address'>Physical Address:</label>
-            <textarea id='address' name='address' required></textarea><br><br>
-            
-            <label for='employment'>Employment Status:</label>
-            <select id='employment' name='employment' required>
-                <option value=''>Select Employment Status</option>
-                <option value='employed'>Employed</option>
-                <option value='self-employed'>Self-Employed</option>
-                <option value='student'>Student</option>
-                <option value='unemployed'>Unemployed</option>
-            </select><br><br>
-            
-            <label for='monthly_income'>Monthly Income (KSh):</label>
-            <input type='number' id='monthly_income' name='monthly_income' required min="0"><br><br>
-            
-            <?php echo $this->submit_button('Join SACCO'); ?>
-            <a href='login.php'>Already a member? Login here</a>
-        </form>
+            <form action='member-submit.php' method='post' style="display: grid; gap: 1rem;">
+                <div>
+                    <label for='full_name' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Full Name:</label>
+                    <input type='text' id='full_name' name='full_name' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                
+                <div>
+                    <label for='id_number' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">National ID Number:</label>
+                    <input type='text' id='id_number' name='id_number' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                
+                <div>
+                    <label for='phone' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Phone Number:</label>
+                    <input type='tel' id='phone' name='phone' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                
+                <div>
+                    <label for='email' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Email Address:</label>
+                    <input type='email' id='email' name='email' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                
+                <div>
+                    <label for='address' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Physical Address:</label>
+                    <textarea id='address' name='address' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem; min-height: 80px; resize: vertical;"></textarea>
+                </div>
+                
+                <div>
+                    <label for='employment' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Employment Status:</label>
+                    <select id='employment' name='employment' required style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                        <option value=''>Select Employment Status</option>
+                        <option value='employed'>Employed</option>
+                        <option value='self-employed'>Self-Employed</option>
+                        <option value='student'>Student</option>
+                        <option value='unemployed'>Unemployed</option>
+                    </select>
+                </div>
+                
+                <div>
+                    <label for='monthly_income' style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Monthly Income (KSh):</label>
+                    <input type='number' id='monthly_income' name='monthly_income' required min="0" style="width: 100%; padding: 0.75rem; border: 1px solid #ddd; border-radius: 4px; font-size: 1rem;">
+                </div>
+                
+                <div style="text-align: center; margin-top: 1.5rem;">
+                    <?php echo $this->submit_button('Join SACCO'); ?>
+                </div>
+                
+                <div style="text-align: center; margin-top: 1rem;">
+                    <a href='login.php' style="color: #3498db; text-decoration: none;">Already a member? Login here</a>
+                </div>
+            </form>
+        </div>
         <?php
     }
 
-    public function driver_registration() {
-        ?>
-        <form action='driver-submit.php' method='post'>
-            <label for='full_name'>Full Name:</label>
-            <input type='text' id='full_name' name='full_name' required><br><br>
-            
-            <label for='license_number'>Driving License Number:</label>
-            <input type='text' id='license_number' name='license_number' required><br><br>
-            
-            <label for='license_class'>License Class:</label>
-            <select id='license_class' name='license_class' required>
-                <option value=''>Select License Class</option>
-                <option value='A'>Class A (Motorcycles)</option>
-                <option value='B'>Class B (Light Vehicles)</option>
-                <option value='C'>Class C (Heavy Vehicles)</option>
-                <option value='D'>Class D (Public Service Vehicles)</option>
-            </select><br><br>
-            
-            <label for='experience_years'>Years of Driving Experience:</label>
-            <input type='number' id='experience_years' name='experience_years' required min="0" max="50"><br><br>
-            
-            <label for='phone'>Phone Number:</label>
-            <input type='tel' id='phone' name='phone' required><br><br>
-            
-            <label for='email'>Email Address:</label>
-    <input type='email' id='email' name='email' required><br><br>
-            
-            <label for='vehicle_type'>Vehicle Type:</label>
-            <select id='vehicle_type' name='vehicle_type' required>
-                <option value=''>Select Vehicle Type</option>
-                <option value='matatu'>Matatu (14-seater)</option>
-                <option value='bus'>Bus (25+ seater)</option>
-                <option value='taxi'>Taxi (4-seater)</option>
-                <option value='motorcycle'>Motorcycle (Boda-boda)</option>
-            </select><br><br>
-            
-            <?php echo $this->submit_button('Apply as Driver'); ?>
-            <a href='login.php'>Already registered? Login here</a>
-</form>
-<?php
-    }
 
     public function ride_booking() {
         ?>
@@ -132,7 +114,7 @@ class forms {
         <?php
     }
 
-        public function member_login() {
+        public function signin() {
         ?>
         <form action='login-process.php' method='post'>
             <label for='member_id'>Member ID / Email:</label>
@@ -148,13 +130,12 @@ class forms {
             <?php echo $this->submit_button('Login'); ?>
             
             <p><a href='member-registration.php'>Not a member? Join SACCO</a></p>
-            <p><a href='driver-registration.php'>Want to drive? Apply here</a></p>
             <p><a href='#'>Forgot Password?</a></p>
         </form>
         <?php
     }
 
     private function submit_button($text) {
-        return "<button type='submit'>$text</button>";
+        return "<button type='submit' style='background-color: #3498db; color: white; padding: 0.75rem 2rem; border: none; border-radius: 4px; font-size: 1rem; cursor: pointer; transition: background-color 0.3s;'>$text</button>";
     }
 }   
